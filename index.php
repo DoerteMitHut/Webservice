@@ -7,10 +7,8 @@ div {
 }
 </style>
 <?php 
-/*
 $pdo = new PDO('mysql:host=localhost;dbname=rittmeister', 'root', 'raspberry');
 $sql = "SELECT * FROM `rittmeistercode826`";
-*/
 ?>
 <head>
 	<meta charset="UTF-8">
@@ -34,50 +32,38 @@ $sql = "SELECT * FROM `rittmeistercode826`";
             </tr>
         </thead>
         <tbody>
-		
-	<tr>
-        <td>'.$row["name"].'</td>
-        <td>'.$row["mail"].'</td>
-        <td>'.$row["code"].'</td>
-		<td>'.$row["fach"].'</td>
-        <td>'.$row["start"].'</td>
-		<td>'.$row["end"].'</td>
-    </tr> 
 <?php
-/*
+
 	foreach ($pdo->query($sql) as $row) 
 {
-    
-	echo '
+echo '
 	<tr>
-        <td>'.$row["name"].'</td>
-        <td>'.$row["mail"].'</td>
-        <td>'.$row["code"].'</td>
+                <td>'.$row["name"].'</td>
+                <td>'.$row["mail"].'</td>
+                <td>'.$row["code"].'</td>
 		<td>'.$row["fach"].'</td>
-        <td>'.$row["start"].'</td>
+                <td>'.$row["start"].'</td>
 		<td>'.$row["end"].'</td>
-    </tr> 
-	
-	
-	';
+        </tr>  ';
 }
-*/
-?>       
-        </tbody>
+
+   ?>
+    </tbody>
     </table>
     <script src="script/jquery-3.3.1.js"></script>
-    <script src="dataTables.min.js"></script>
+    <script src="script/dataTables.min.js"></script>
     <script src="script/dataTables.bootstrap4.min.js"></script>
     <script src="script/dataTables.buttons.min.js"></script>
     <script src="script/buttons.bootstrap4.min.js"></script>
     <script src="script/jszip.min.js"></script>
     <script src="script/pdfmake.min.js"></script>
-    <script src="sricpt/vfs_fonts.js"></script>
-    <script src="sricpt/buttons.html5.min.js"></script>
-    <script src="sricpt/buttons.print.min.js"></script>
-    <script src="sricpt/buttons.colVis.min.js"></script>
-    <script src="sricpt/dataTables.responsive.min.js"></script>
+    <script src="script/vfs_fonts.js"></script>
+    <script src="script/buttons.html5.min.js"></script>
+    <script src="script/buttons.print.min.js"></script>
+    <script src="script/buttons.colVis.min.js"></script>
+    <script src="script/dataTables.responsive.min.js"></script>
     <script src="script/responsive.bootstrap4.min.js"></script>
+    
     <script>
 	$(document).ready(function() {
 	    var table = $('#example').DataTable( {
